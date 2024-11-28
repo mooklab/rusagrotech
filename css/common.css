@@ -759,6 +759,7 @@ header menu {
   display: -ms-flexbox;
   display: flex;
   gap: 65px;
+  height: 100%;
 }
 @media (max-width: 960px) {
   header menu {
@@ -766,10 +767,38 @@ header menu {
   }
 }
 header menu a {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  height: 100%;
   font-weight: 500;
   font-size: 12px;
   text-transform: uppercase;
   white-space: nowrap;
+}
+header menu a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -12px;
+  display: block;
+  width: 0px;
+  height: 3px;
+  background: #34C397;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+header menu a:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -12px;
+  display: block;
+  width: calc(100% + 24px);
+  height: 3px;
+  background: #34C397;
 }
 header menu a:first-child {
   display: -webkit-box;

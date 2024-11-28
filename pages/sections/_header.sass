@@ -17,14 +17,41 @@ header
     menu
         display: flex
         gap: 65px
+        height: 100%
         +screen(m)
             display: none
 
         a
+            display: grid
+            align-items: center
+            position: relative
+            height: 100%
             font-weight: 500
             font-size: 12px
             text-transform: uppercase
             white-space: nowrap
+            &::after
+                content: ''
+                position: absolute
+                bottom: 0
+                left: -12px
+                display: block
+                width: 0px
+                height: 3px
+                background: #34C397
+                transition: all .3s
+
+            &:hover
+                &::after
+                    content: ''
+                    position: absolute
+                    bottom: 0
+                    left: -12px
+                    display: block
+                    width: calc(100% + 24px)
+                    height: 3px
+                    background: #34C397
+
 
         a:first-child
             display: flex
