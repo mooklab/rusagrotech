@@ -12,3 +12,16 @@ mixin select(name, title, ...items)
         div.select_list
             each item, index in items
                 label(for=name + '_' + index)= item
+
+mixin article(image, date, title)
+    a(href="article.html").article
+        div.image
+            img(src=image, alt=title)
+        i= date
+        span= title
+
+mixin project(image, title)
+    a(href="project.html").project
+        div.image
+            img(src=image, alt=title)
+        span= title

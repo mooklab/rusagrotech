@@ -1,8 +1,4 @@
-mixin article(image, date, title)
-    a(href="article.html").article
-        img(src=image, alt=title)
-        i= date
-        span= title
+include ../../common/pug/_mixins.pug
 
 section.news
     div.container
