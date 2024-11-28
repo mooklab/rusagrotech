@@ -1,0 +1,20 @@
+extends common/pug/_layout.pug
+
+block links
+    link(rel="stylesheet", href="css/about.css")
+
+block content
+    include sections/about/_main.pug
+    include sections/about/_team.pug
+    include sections/about/_history.pug
+    include sections/about/_career.pug
+    include sections/about/_conditions.pug
+    include sections/about/_brandbook.pug
+
+    script.
+        header = document.querySelector('header')
+        header.classList.add('transparent')
+
+        window.addEventListener('scroll', event => {
+            this.scrollY > 0 ? header.classList.remove("transparent") : header.classList.add("transparent")
+        })

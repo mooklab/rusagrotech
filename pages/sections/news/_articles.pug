@@ -1,0 +1,30 @@
+mixin article(image, title)
+    div.article
+        img(src=image, alt=title)
+        div.text
+            strong= title
+            span В рамках перехода с зарубежных решений Factory Talk и Simatic WinCC на российскую платформу будут оптимизированы процессы управления предприятием, минимизированы риски сбоев и остановки производственного процесса.
+            a(href="article.html").button читать статью
+
+section.articles
+    div.container
+
+        div.title
+            h1 Новости
+
+        div.swiper
+            div.swiper-wrapper
+                div.swiper-slide
+                    +article('images/3.webp', 'Система формирования оптимального трека движения сельхоз техники')
+                div.swiper-slide
+                    +article('images/4.webp', 'Система формирования оптимального трека движения сельхоз техники')
+                div.swiper-slide
+                    +article('images/5.webp', 'Система формирования оптимального трека движения сельхоз техники')
+                div.swiper-slide
+                    +article('images/6.webp', 'Система формирования оптимального трека движения сельхоз техники')
+
+        div.swiper-pagination
+            div.arrow
+                include ../../../images/swiper_pagination.svg
+            div.arrow
+                include ../../../images/swiper_pagination.svg

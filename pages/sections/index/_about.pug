@@ -1,0 +1,29 @@
+section.about
+    div.container
+
+        div.swiper.texts
+            div.swiper-wrapper
+                - for (var i = 1; i <= 4; i++)
+                    div.swiper-slide
+                        div.title
+                            h2 О компании
+                            span Мы глубоко понимаем агропромышленный комплекс, ведь мы часть крупнейшего агрохолдинга России. Мы знаем на собственном опыте, какие решения действительно работают.
+                            strong Мы вкладываем душу и экспертизу в каждый наш продукт.
+                        img(src="images/32.webp", alt="")
+                        div.text
+                            span Мы верим, что цифровые технологии могут преобразить агропромышленный комплекс.Сделать его более эффективным, устойчивым и прибыльным. Дать новые возможности для развития бизнеса и реализации смелых идей.
+                            a(href="about.html").button узнать больше
+
+
+        div.swiper.years
+            div.swiper-wrapper
+                div.swiper-slide 2014
+                div.swiper-slide 2020
+                div.swiper-slide 2024
+                div.swiper-slide Цифровое будущее
+
+        div.swiper-pagination
+            div.arrow
+                include ../../../images/swiper_pagination.svg
+            div.arrow
+                include ../../../images/swiper_pagination.svg

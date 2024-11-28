@@ -1,0 +1,182 @@
+section.map {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+@media (max-width: 960px) {
+  section.map {
+    margin-top: 40px;
+  }
+}
+section.map div.container {
+  display: grid;
+}
+section.map h1 {
+  font-weight: 400;
+  font-size: 68px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: -12px;
+}
+@media (max-width: 960px) {
+  section.map h1 {
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 129%;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: left;
+  }
+}
+section.map div.list {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: -webkit-max-content;
+  grid-auto-columns: max-content;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-gap: 130px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+@media (max-width: 1280px) {
+  section.map div.list {
+    grid-auto-flow: unset;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 28px;
+  }
+}
+@media (max-width: 960px) {
+  section.map div.list {
+    margin-top: 28px;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 640px) {
+  section.map div.list {
+    grid-template-columns: 1fr;
+  }
+}
+section.map div.list div.contact {
+  display: grid;
+  grid-gap: 24px;
+}
+section.map div.list div.contact strong {
+  font-weight: 400;
+  font-size: 18px;
+  color: #1c252e;
+}
+section.map div.list div.contact span {
+  font-weight: 400;
+  font-size: 15px;
+  color: #7a7e83;
+}
+@media (max-width: 960px) {
+  section.map div.list div.contact span {
+    font-size: 14px;
+  }
+}
+section.map div#map {
+  width: 100%;
+  height: 670px;
+}
+@media (max-width: 960px) {
+  section.map div#map {
+    height: 414px;
+  }
+}
+
+section.form {
+  margin-top: 60px;
+  margin-bottom: 105px;
+}
+@media (max-width: 960px) {
+  section.form {
+    margin-bottom: 60px;
+  }
+}
+section.form form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 60px 24px;
+  margin-top: 42px;
+}
+@media (max-width: 1280px) {
+  section.form form {
+    grid-template-columns: 1fr;
+    grid-gap: 24px;
+  }
+}
+section.form form div.person {
+  display: grid;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 24px;
+}
+@media (max-width: 640px) {
+  section.form form div.person {
+    grid-template-columns: 1fr;
+    grid-gap: 6px;
+  }
+}
+section.form form div.contacts {
+  display: grid;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 28px 24px;
+}
+@media (max-width: 640px) {
+  section.form form div.contacts {
+    grid-template-columns: 1fr;
+    grid-gap: 6px;
+  }
+}
+section.form form div.message {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 28px 24px;
+}
+@media (max-width: 640px) {
+  section.form form div.message {
+    grid-gap: 6px;
+  }
+}
+section.form form div.message label.upload {
+  margin-top: -10px;
+}
+@media (max-width: 640px) {
+  section.form form div.message label.upload {
+    margin-top: 18px;
+  }
+}
+section.form form div.send {
+  display: grid;
+  grid-template-columns: -webkit-max-content -webkit-max-content;
+  grid-template-columns: max-content max-content;
+  grid-gap: 43px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  grid-column: 2 span;
+}
+@media (max-width: 1280px) {
+  section.form form div.send {
+    grid-column: 1 span;
+    grid-gap: 40px;
+  }
+}
+@media (max-width: 640px) {
+  section.form form div.send {
+    margin-top: 16px;
+    grid-template-columns: 1fr;
+    justify-items: start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}/*# sourceMappingURL=contacts.css.map */

@@ -1,0 +1,96 @@
+section.main
+    background: #1c252e
+    padding-top: 218px
+    padding-bottom: 197px
+    margin-top: -80px
+    +screen(m)
+        padding-top: 170px
+        padding-bottom: 185px
+
+    div.swiper.images
+        pointer-events: none
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        img
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: center center
+
+    div.swiper.texts
+        overflow: visible
+        div.swiper-slide
+            display: grid
+            justify-items: end
+            opacity: 0
+            transition: all .5s
+            +screen(m)
+                justify-items: start
+
+            h1
+                color: white
+                margin-bottom: 103px
+                justify-self: start
+                +screen(m)
+                    margin-bottom: 40px
+
+            p
+                font-weight: 400
+                font-size: 21px
+                color: white
+                max-width: 584px
+                margin-bottom: 13px
+                +screen(m)
+                    font-size: 14px
+                    margin-bottom: 24px
+                    max-width: 259px
+
+            a.button
+                color: white
+                border: 1px solid rgba(255, 255, 255, 0.6)
+
+            &.swiper-slide-active
+                opacity: 1
+
+    div.swiper.tabs
+        position: absolute
+        left: 50%
+        bottom: 24px
+        transform: translateX(-50%)
+        max-width: calc((180px * 3) + (4px * 2))
+        +screen(s)
+            max-width: 100%
+            padding: 0 12px
+
+        div.swiper-slide
+            cursor: pointer
+            display: grid
+            align-content: start
+            grid-gap: 8px
+            counter-increment: tabs
+            font-weight: 400
+            font-size: 11px
+            letter-spacing: 0.02em
+            color: white
+            border-bottom: 1px solid rgba(255, 255, 255, 0.6)
+            padding-bottom: 12px
+            height: auto
+            +screen(m)
+                border-bottom: 1px solid transparent
+
+            &::before
+                content: '0' counter(tabs)
+                display: block
+                font-family: Stapel
+                font-weight: 400
+                font-size: 10px
+                text-transform: uppercase
+
+            &.swiper-slide-thumb-active
+                border-bottom: 1px solid #34c397

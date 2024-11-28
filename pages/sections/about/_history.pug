@@ -1,0 +1,40 @@
+section.history
+    div.container
+
+        h2 История компании
+
+        div.swiper.images
+            div.swiper-wrapper
+                div.swiper-slide: img(src="images/24.webp", alt="")
+                div.swiper-slide: img(src="images/18.webp", alt="")
+                div.swiper-slide: img(src="images/25.webp", alt="")
+                div.swiper-slide: img(src="images/29.webp", alt="")
+                div.swiper-slide: img(src="images/24.webp", alt="")
+                div.swiper-slide: img(src="images/18.webp", alt="")
+                div.swiper-slide: img(src="images/25.webp", alt="")
+                div.swiper-slide: img(src="images/29.webp", alt="")
+
+        div.swiper.years
+            div.swiper-wrapper
+                div.swiper-slide 2014
+                div.swiper-slide 2020
+                div.swiper-slide 2024
+                div.swiper-slide Цифровое будущее
+
+        div.swiper.texts
+            div.swiper-wrapper
+                - for (var i = 1; i <= 4; i++)
+                    div.swiper-slide
+                        div.left
+                            strong Мы глубоко понимаем агропромышленный комплекс, ведь мы часть крупнейшего агрохолдинга России Мы знаем на собственном опыте, какие решения действительно работают.
+                        div.right
+                            span Мы обладаем уникальными компетенциями  в сфере применения и развития цифровых инструментов в разных направлениях: производство сахара, свиноводство, растениеводство, производство масел и жиров
+                            br
+                            br
+                            span За короткое время мы прошли путь от команды ИТ-специалистов к современной технологической компании с использованием мировых практик. Наши продукты помогают решать различные задачи бизнеса, от оптимизации маршрутов доставки до управления цифровыми свинофермами.".
+
+        div.swiper-pagination
+            div.arrow
+                include ../../../images/swiper_pagination.svg
+            div.arrow
+                include ../../../images/swiper_pagination.svg

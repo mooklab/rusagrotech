@@ -1,0 +1,369 @@
+section.main {
+  margin-top: -80px;
+  padding-top: 337px;
+  padding-bottom: 170px;
+}
+@media (max-width: 960px) {
+  section.main {
+    padding-top: 224px;
+    padding-bottom: 184px;
+  }
+}
+section.main div.container {
+  display: grid;
+  justify-items: end;
+}
+@media (max-width: 960px) {
+  section.main div.container {
+    justify-items: start;
+  }
+}
+section.main img {
+  grid-column: full;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  z-index: -2;
+}
+@media (max-width: 960px) {
+  section.main img {
+    -webkit-transform: scaleX(-1);
+        -ms-transform: scaleX(-1);
+            transform: scaleX(-1);
+    -o-object-position: 65% center;
+       object-position: 65% center;
+  }
+}
+section.main h1 {
+  color: white;
+  margin-bottom: 103px;
+  justify-self: start;
+}
+@media (max-width: 960px) {
+  section.main h1 {
+    margin-bottom: 97px;
+  }
+}
+section.main p {
+  font-weight: 400;
+  font-size: 21px;
+  color: white;
+  max-width: 584px;
+  margin-bottom: 13px;
+}
+@media (max-width: 960px) {
+  section.main p {
+    font-size: 14px;
+    margin-bottom: 24px;
+    max-width: 259px;
+  }
+}
+
+section.stack {
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+@media (max-width: 960px) {
+  section.stack {
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+}
+section.stack div.container {
+  display: grid;
+  grid-gap: 40px;
+}
+@media (max-width: 960px) {
+  section.stack div.container {
+    grid-gap: 28px;
+  }
+}
+section.stack div.advantages {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 24px;
+  align-self: stretch;
+}
+@media (max-width: 960px) {
+  section.stack div.advantages {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+}
+section.stack div.advantages div.advantage {
+  display: grid;
+  grid-gap: 16px;
+  -ms-flex-line-pack: end;
+      align-content: end;
+  border: 1px solid #c6ccca;
+  padding: 40px 24px;
+}
+@media (max-width: 960px) {
+  section.stack div.advantages div.advantage {
+    grid-gap: 24px;
+    font-size: 14px;
+    -ms-flex-line-pack: start;
+        align-content: start;
+    padding: 24px;
+    overflow: hidden;
+    min-height: 188px;
+  }
+}
+
+section.stages {
+  margin-top: 40px;
+  margin-bottom: 71px;
+}
+@media (max-width: 960px) {
+  section.stages {
+    margin-bottom: 40px;
+  }
+}
+section.stages div.container {
+  display: grid;
+}
+section.stages div.swiper.tabs {
+  width: 100%;
+  min-width: 0;
+}
+@media (max-width: 640px) {
+  section.stages div.swiper.tabs {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+section.stages div.swiper.tabs div.swiper-slide {
+  height: auto !important;
+}
+section.stages div.swiper.tabs div.stage {
+  cursor: pointer;
+  background: #FCFCFC;
+  height: 100%;
+}
+section.stages div.swiper.tabs div.stage img {
+  width: 100%;
+  height: 303px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  opacity: 0.1;
+}
+section.stages div.swiper.tabs div.stage div.text {
+  position: relative;
+  display: grid;
+  justify-items: start;
+  padding: 28px 20px 60px;
+}
+section.stages div.swiper.tabs div.stage div.text strong {
+  font-weight: 400;
+  font-size: 21px;
+  color: #000;
+  margin-bottom: 8px;
+}
+section.stages div.swiper.tabs div.stage div.text i {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  color: #7a7e83;
+  margin-bottom: 46px;
+}
+section.stages div.swiper.tabs div.stage div.text span {
+  font-weight: 400;
+  font-size: 16px;
+  color: #1c252e;
+  margin-bottom: 40px;
+}
+section.stages div.swiper.tabs div.stage div.text button {
+  display: none;
+}
+section.stages div.swiper.tabs div.stage div.text::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 20px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: #C6CCCA;
+  border-radius: 8px;
+}
+section.stages div.swiper.tabs div.swiper-slide-thumb-active div.stage {
+  background: #EBF9F5;
+}
+section.stages div.swiper.tabs div.swiper-slide-thumb-active div.stage img {
+  opacity: 1;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+section.stages div.swiper.tabs div.swiper-slide-thumb-active div.text button {
+  display: block;
+}
+section.stages div.swiper.tabs div.swiper-slide-thumb-active div.text::before {
+  background: #34C397;
+  border: 12px solid #EBF9F5;
+  border-radius: 999px;
+  top: -20px;
+  left: 8px;
+}
+section.stages div.swiper.contents {
+  width: 100%;
+  min-width: 0;
+}
+@media (max-width: 640px) {
+  section.stages div.swiper.contents {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+section.stages div.swiper.contents div.swiper-slide {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 24px;
+  margin-top: 50px;
+}
+@media (max-width: 960px) {
+  section.stages div.swiper.contents div.swiper-slide {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 640px) {
+  section.stages div.swiper.contents div.swiper-slide {
+    margin-top: unset;
+  }
+}
+section.stages div.swiper.contents div.swiper-slide img {
+  width: 100%;
+  height: 573px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+@media (max-width: 960px) {
+  section.stages div.swiper.contents div.swiper-slide img {
+    height: 444px;
+  }
+}
+section.stages div.swiper.contents div.swiper-slide div.text {
+  display: grid;
+  justify-items: start;
+  padding-top: 38px;
+  padding-left: 44px;
+}
+@media (max-width: 1280px) {
+  section.stages div.swiper.contents div.swiper-slide div.text {
+    padding-left: unset;
+  }
+}
+@media (max-width: 960px) {
+  section.stages div.swiper.contents div.swiper-slide div.text {
+    padding-top: unset;
+  }
+}
+section.stages div.swiper.contents div.swiper-slide div.text strong {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 137%;
+  margin-top: 60px;
+}
+@media (max-width: 960px) {
+  section.stages div.swiper.contents div.swiper-slide div.text strong {
+    margin-top: 40px;
+  }
+}
+section.stages div.swiper.contents div.swiper-slide div.text strong + p {
+  margin-top: 60px;
+}
+@media (max-width: 960px) {
+  section.stages div.swiper.contents div.swiper-slide div.text strong + p {
+    margin-top: 40px;
+  }
+}
+section.stages div.swiper.contents div.swiper-slide div.text p, section.stages div.swiper.contents div.swiper-slide div.text span {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 140%;
+  color: #7a7e83;
+  margin-top: 21px;
+}
+@media (max-width: 960px) {
+  section.stages div.swiper.contents div.swiper-slide div.text p, section.stages div.swiper.contents div.swiper-slide div.text span {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    margin-top: 40px;
+  }
+}
+section.stages div.swiper.contents div.swiper-slide div.text button {
+  margin-top: 40px;
+  min-width: 147px;
+}
+@media (max-width: 960px) {
+  section.stages div.swiper.contents div.swiper-slide div.text button {
+    justify-self: center;
+  }
+}
+section.stages div.swiper-pagination {
+  margin-bottom: 40px;
+  justify-self: end;
+}
+@media (max-width: 640px) {
+  section.stages div.swiper-pagination {
+    margin-top: 28px;
+    margin-bottom: 60px;
+    display: grid;
+    justify-self: center;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
+section.gallery {
+  margin-top: 71px;
+  margin-bottom: 60px;
+}
+@media (max-width: 640px) {
+  section.gallery {
+    display: none;
+  }
+}
+section.gallery div.title {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: 1fr -webkit-max-content;
+  grid-template-columns: 1fr max-content;
+  grid-gap: 34px;
+  margin-bottom: 40px;
+}
+@media (max-width: 960px) {
+  section.gallery div.title {
+    margin-bottom: 28px;
+  }
+}
+section.gallery div.swiper img {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+@media (max-width: 960px) {
+  section.gallery div.swiper img {
+    height: 325px;
+  }
+}/*# sourceMappingURL=project.css.map */

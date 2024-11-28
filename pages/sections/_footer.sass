@@ -1,0 +1,79 @@
+footer
+
+    div.container
+        display: grid
+        grid-template-columns: max-content auto max-content max-content
+        grid-template-areas: 'Copyright Policy Menu MWI'
+        justify-content: space-between
+        align-items: center
+        gap: 30px
+        padding-top: 60px
+        padding-bottom: 60px
+        border-top: 1px solid #EBEBEB
+        +screen(m)
+            grid-template-columns: max-content 1fr max-content
+            grid-template-areas: 'Menu Menu Menu' 'Copyright Policy MWI'
+        +screen(s)
+            grid-template-columns: 1fr
+            grid-template-areas: 'Menu' 'Policy' 'Copyright' 'MWI'
+            justify-items: center
+            padding-top: unset
+            border: unset
+            gap: 40px
+
+    span.copyright
+        grid-area: Copyright
+        font-weight: 300
+        font-size: 14px
+        color: #000
+    
+    a.policy
+        grid-area: Policy
+        font-weight: 400
+        font-size: 14px
+        text-decoration: underline
+        text-decoration-skip-ink: none
+        color: #6ad0f8
+        +screen(s)
+            text-align: center
+
+    menu
+        grid-area: Menu
+        display: flex
+        gap: 65px
+        +screen(l)
+            gap: 40px
+        +screen(s)
+            width: 100%
+            padding-top: 60px
+            padding-bottom: 60px
+            flex-direction: column
+            align-items: center
+            gap: 40px
+            border-top: 1px solid #EBEBEB
+            border-bottom: 1px solid #EBEBEB
+
+        a
+            font-weight: 500
+            font-size: 12px
+            text-transform: uppercase
+            white-space: nowrap
+
+        a:first-child
+            display: flex
+            align-items: center
+            gap: 10px
+            +screen(s)
+                flex-direction: column
+                gap: 14px
+            &::before
+                content: ''
+                display: block
+                width: 22px
+                height: 6px
+                background-image: url(../images/menu_dots.svg)
+
+    a.mwi
+        grid-area: MWI
+        +screen(s)
+            margin-top: 20px

@@ -1,0 +1,21 @@
+extends common/pug/_layout.pug
+
+block links
+    link(rel="stylesheet", href="css/pages.css")
+
+block content
+    section.pages
+        div.container
+
+            h2 Страницы
+
+            div.list
+                a(href="index.html", target="blank") Главная
+                a(href="projects.html", target="blank") Проекты
+                a(href="project.html", target="blank") Проект
+                a(href="news.html", target="blank") Новости
+                a(href="article.html", target="blank") Новость
+                a(href="about.html", target="blank") О компании
+                a(href="contacts.html", target="blank") Контакты
+                a(href="404.html", target="blank") 404
+                a(href="policy.html", target="blank") Согласие на обработку

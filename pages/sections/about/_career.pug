@@ -1,0 +1,27 @@
+mixin accordion(title)
+    div.accordion
+        div.accordion_caption
+            span= title
+            div.icon
+                img(src="images/accordion_plus.svg", alt="")
+                img(src="images/accordion_minus.svg", alt="")
+        div.accordion_content
+            div.accordion_overflow
+                div.accordion_wrap
+                    div.text
+                        strong Основные требования 
+                        p Стартовал приём заявок национальной премии за вклад в развитие технологий искусственного интеллекта «Лидеры ИИ»
+                    div.text
+                        strong Что предлагаем
+                        p Стартовал приём заявок национальной премии за вклад в развитие технологий искусственного интеллекта «Лидеры ИИ»
+                    a(href="index.html").button узнать больше
+
+section.career
+    div.container
+
+        h2 Карьера в компании
+
+        div.list
+            +accordion('HR менеджер')
+            +accordion('Аккаунт менеджер')
+            +accordion('Специалист по  информационной безопасности')

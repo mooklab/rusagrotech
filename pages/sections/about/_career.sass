@@ -1,0 +1,96 @@
+section.career
+    margin-top: 65px
+    margin-bottom: 60px
+    +screen(s)
+        margin-top: 60px
+        margin-bottom: calc(60px - 24px)
+
+    div.container
+        display: grid
+        grid-gap: 30px
+        +screen(m)
+            grid-gap: 0
+
+    div.accordion
+        border-bottom: 1px solid #DFDFDF
+
+        div.accordion_caption
+            cursor: pointer
+            display: grid
+            align-items: center
+            grid-template-columns: 1fr max-content
+            user-select: none
+            padding: 30px 0
+            +screen(m)
+                padding: 24px 0
+
+            span
+                font-weight: 400
+                font-size: 21px
+                padding-right: 46px
+                +screen(m)
+                    font-weight: 400
+                    font-size: 18px
+
+            div.icon
+                width: 22px
+                height: 22px
+                display: grid
+                align-items: center
+                justify-items: center
+                background: #D7D7D7
+                border-radius: 11px
+                img
+                    &:first-child
+                        display: block
+                    &:last-child
+                        display: none
+
+        div.accordion_content
+            div.accordion_wrap
+                display: grid
+                justify-items: start
+                grid-gap: 35px
+                padding-bottom: 40px
+                padding-left: calc(50% + 12px)
+                +screen(m)
+                    padding-left: unset
+                    grid-gap: 28px
+            div.text
+                display: grid
+                grid-gap: 21px
+                +screen(m)
+                    grid-gap: 23px
+                strong
+                    display: block
+                    font-weight: 300
+                    font-size: 16px
+                    color: #000
+                    max-width: 540px
+                    +screen(m)
+                        font-size: 14px
+                p
+                    display: block
+                    font-weight: 400
+                    font-size: 15px
+                    color: #7a7e83
+                    max-width: 540px
+                    +screen(m)
+                        font-size: 14px
+
+        &.open
+            div.accordion_caption
+                div.icon
+                    background: #34C397
+                    img
+                        &:first-child
+                            display: none
+                        &:last-child
+                            display: block
+
+        &:last-child
+            +screen(s)
+                border: unset
+
+
+

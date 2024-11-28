@@ -1,0 +1,35 @@
+section.stack
+    margin-top: 60px
+    margin-bottom: 40px
+    +screen(m)
+        margin-top: 40px
+        margin-bottom: 60px
+
+    div.container
+        display: grid
+        grid-gap: 40px
+        +screen(m)
+            grid-gap: 28px
+
+    div.advantages
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-gap: 24px
+        align-self: stretch
+        +screen(m)
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 20px
+
+        div.advantage
+            display: grid
+            grid-gap: 16px
+            align-content: end
+            border: 1px solid #c6ccca
+            padding: 40px 24px
+            +screen(m)
+                grid-gap: 24px
+                font-size: 14px
+                align-content: start
+                padding: 24px
+                overflow: hidden
+                min-height: 188px

@@ -1,0 +1,24 @@
+section.gallery
+    margin-top: 71px
+    margin-bottom: 60px
+    +screen(s)
+        display: none
+
+    div.title
+        display: grid
+        align-items: center
+        grid-template-columns: 1fr max-content
+        grid-gap: 34px
+        margin-bottom: 40px
+        +screen(m)
+            margin-bottom: 28px
+
+    div.swiper
+
+        img
+            width: 100%
+            height: 400px
+            object-fit: cover
+            object-position: center center
+            +screen(m)
+                height: 325px

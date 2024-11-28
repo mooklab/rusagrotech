@@ -1,0 +1,316 @@
+strong, span, p, i
+    margin-top: -4px
+    margin-bottom: -4px
+    
+h1, h2, h3, h4
+    font-family: Stapel
+    span
+        font-size: inherit
+        font-weight: inherit
+        line-height: inherit
+        color: transparent
+        background-image: linear-gradient(90deg, #34c397 50%, transparent 50%)
+        background-position: 100%
+        background-size: 200% 100%
+        background-clip: text
+        -webkit-background-clip: text
+        transition-property: background-position
+        transition-duration: 1s
+
+    &.light
+        span
+            background-image: linear-gradient(90deg, #34c397 50%, transparent 50%)
+
+    &.animate
+        span
+            background-position: 0
+
+h1
+    font-weight: 400
+    font-size: 112px
+    line-height: 105%
+    text-transform: uppercase
+    +screen(m)
+        font-size: 48px
+        line-height: 112%
+
+h2
+    font-weight: 400
+    font-size: 42px
+    text-transform: uppercase
+    margin-top: -10px
+    margin-bottom: -12px
+    +screen(m)
+        font-size: 28px
+        margin-top: -6px
+        margin-bottom: -7px
+
+button, a.button
+    cursor: pointer
+    display: inline-block
+    border: 1px solid #c6ccca
+    border-radius: 8px
+    padding: 11px 28px
+    font-weight: 400
+    font-size: 14px
+    line-height: 16px
+    text-align: center
+    color: #5c5c5c
+    transition: all 0.15s
+    +screen(m)
+        font-size: 11px
+        line-height: 8px
+    span
+        font-weight: 400
+        font-size: 14px
+        line-height: 16px
+        color: #5c5c5c
+    &:hover
+        background: #34C397 !important
+        border: 1px solid #34C397 !important
+        color: white !important
+
+div.swiper-pagination
+    display: grid
+    align-items: center
+    grid-auto-flow: column
+    grid-auto-columns: max-content
+    grid-gap: 8px
+    position: static
+    user-select: none
+    +screen(s)
+        display: none
+
+    div.arrow
+        cursor: pointer
+        display: grid
+        align-items: center
+        justify-items: center
+        width: 40px
+        height: 40px
+        border-radius: 24px
+        fill: #fff
+        border: 1px solid #c6ccca
+        transition: all 0.15s
+        svg
+            path
+                transition: all 0.15s
+
+        &:first-child
+            transform: rotate(180deg)
+
+        &:hover
+            background: #34C397 !important
+            border: 1px solid #34C397 !important
+
+            svg
+                path
+                    fill: white
+
+        &.swiper-button-disabled
+            opacity: 0.3
+            pointer-events: none
+
+fieldset.select
+    height: max-content
+    position: relative
+    z-index: 9
+    &:hover
+        z-index: 10
+    div.select_current
+        position: relative
+        display: grid
+        grid-template-columns: max-content max-content
+        grid-gap: 8px
+        align-items: center
+        cursor: pointer
+        outline: none
+        input
+            display: none
+            &:checked
+                & + span
+                    display: block
+        span
+            display: none
+            color: #000
+            width: 100%
+            padding-top: 10px
+            padding-bottom: 10px
+        &:focus
+            pointer-events: none
+            span
+                background-color: white
+                border-bottom-left-radius: 0
+                border-bottom-right-radius: 0
+            div.arrow
+                transform: rotate(180deg)
+                svg
+                    path
+                        stroke: #C6D50A
+            & + div.select_list
+                opacity: 1
+                animation-name: none
+    div.select_list
+        display: block
+        position: absolute
+        top: 100%
+        right: 0
+        width: max-content
+        height: max-content
+        opacity: 0
+        box-shadow: 0 6px 14px 0 rgba(0, 0, 0, 0.1), 0 26px 26px 0 rgba(0, 0, 0, 0.09), 0 58px 35px 0 rgba(0, 0, 0, 0.05), 0 104px 42px 0 rgba(0, 0, 0, 0.01), 0 162px 45px 0 rgba(0, 0, 0, 0)
+        background: white
+        padding: 10px
+        animation-name: hideList
+        animation-duration: 0.5s
+        animation-delay: 0.5s
+        animation-fill-mode: forwards
+        animation-timing-function: step-start
+        overflow-y: auto
+        label
+            cursor: pointer
+            display: block
+            padding: 10px
+            white-space: nowrap
+            &:hover, &:focus
+                color: #34C397
+            &:not(:last-child)
+                border-bottom: 1px solid #D9D9DC
+
+    @keyframes hideList
+        from
+            transform: scaleY(1)
+        to
+            transform: scaleY(0)
+
+label.upload
+    cursor: pointer
+    display: grid
+    align-items: center
+    grid-template-columns: max-content auto
+    justify-self: start
+    grid-gap: 14px
+    input
+        display: none
+
+    div.icon
+        display: grid
+        align-items: center
+        justify-items: center
+        width: 22px
+        height: 22px
+        background: #d7d7d7
+        border-radius: 11px
+
+        img.plus
+            display: block
+        img.tick
+            display: none
+
+    span
+        font-weight: 400
+        font-size: 12px
+        line-height: 150%
+        color: #7a7e83
+        &.name
+            display: none
+
+    &.added
+        div.icon
+            background: #34C397
+            img.tick
+                display: block
+            img.plus
+                display: none
+
+        span.default
+            display: none
+        span.name
+            display: inline
+
+    &:hover
+        div.icon
+            background: #34C397
+
+fieldset.text
+    position: relative
+    width: 100%
+    input
+        display: block
+        border-bottom: 1px solid #C6CCCA
+        height: 42px
+        width: 100%
+        &[required] + span
+            &::after
+                content: '*'
+                color: #34C397
+
+        &[required]:valid:not(:placeholder-shown):not(:focus)
+            border-bottom: 1px solid #34c397
+
+        &[required]:invalid:not(:placeholder-shown):not(:focus)
+            border-bottom: 1px solid #da6e6e
+            & ~ div.error
+                display: block
+
+        &:not(:placeholder-shown)
+            & + span
+                display: none
+
+    span
+        pointer-events: none
+        position: absolute
+        left: 0
+        top: 50%
+        transform: translateY(-50%)
+        margin: unset
+        font-weight: 400
+        font-size: 15px
+        color: #7a7e83
+
+    div.error
+        display: none
+        position: absolute
+        top: 100%
+        left: 0
+        font-weight: 400
+        font-size: 12px
+        line-height: 150%
+        color: #da6e6e
+
+label.checkbox
+    cursor: pointer
+    position: relative
+    display: grid
+    grid-template-columns: max-content 1fr
+    align-items: center
+    grid-gap: 11px
+    user-select: none
+    input
+        display: none
+
+        &:checked + div.tick img
+            display: block
+        
+    div.tick
+        display: grid
+        align-items: center
+        justify-items: center
+        border: 1px solid #c6ccca
+        width: 17px
+        height: 17px
+        img
+            display: none
+
+    span
+        display: block
+        font-weight: 400
+        font-size: 12px
+        color: #afb1b3
+
+
+
+
+
+
+

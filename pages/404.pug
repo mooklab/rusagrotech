@@ -1,0 +1,14 @@
+extends common/pug/_layout.pug
+
+block links
+    link(rel="stylesheet", href="css/404.css")
+
+block content
+    section.error
+        div.container
+            h1 404
+            h2 СТРАНИЦА НЕ НАЙДЕНА
+            span Кажется, что-то пошло не так. Страница, которую вы запрашиваете, не существует. Она могла устареть или была удалена. 
+            a(href="index.html").button на главную
+
+            img(src="images/404.svg", alt="")

@@ -1,0 +1,43 @@
+mixin article(image, date, title)
+    a(href="article.html").article
+        img(src=image, alt=title)
+        i= date
+        span= title
+
+section.news
+    div.container
+
+        div.title
+            h2 новости
+
+            a(href="news.html").button все новости
+
+            div.swiper-pagination
+                div.arrow
+                    include ../../../images/swiper_pagination.svg
+                div.arrow
+                    include ../../../images/swiper_pagination.svg
+
+        div.swiper.desktop
+            div.swiper-wrapper
+                div.swiper-slide
+                    +article('images/3.webp', '1.11.2023', 'Стартовал приём заявок национальной премии за вклад в развитие технологий искусственного интеллекта «Лидеры ИИ»')
+                div.swiper-slide
+                    +article('images/4.webp', '1.11.2023', 'Завершен первый этап проекта доработки и внедрения цифровой платформы (системы класса MES)')
+                div.swiper-slide
+                    +article('images/5.webp', '1.11.2023', 'Русагро Тех подготовила задачу для участников международного конкурса AI Challenge')
+                div.swiper-slide
+                    +article('images/6.webp', '1.11.2023', 'Русагро Тех поделились опытом цифровизации и внедрения искусственного интеллекта в проекты')
+                div.swiper-slide
+                    +article('images/3.webp', '1.11.2023', 'Стартовал приём заявок национальной премии за вклад в развитие технологий искусственного интеллекта «Лидеры ИИ»')
+                div.swiper-slide
+                    +article('images/4.webp', '1.11.2023', 'Завершен первый этап проекта доработки и внедрения цифровой платформы (системы класса MES)')
+                div.swiper-slide
+                    +article('images/5.webp', '1.11.2023', 'Русагро Тех подготовила задачу для участников международного конкурса AI Challenge')
+                div.swiper-slide
+                    +article('images/6.webp', '1.11.2023', 'Русагро Тех поделились опытом цифровизации и внедрения искусственного интеллекта в проекты')
+
+        //- div.list.mobile
+        //-     +article('images/1.webp', '1.11.2023', 'Стартовал приём заявок национальной премии за вклад в развитие технологий искусственного интеллекта «Лидеры ИИ»')
+        //-     +article('images/1.webp', '1.11.2023', 'Завершен первый этап проекта доработки и внедрения цифровой платформы (системы класса MES)')
+        //-     +article('images/1.webp', '1.11.2023', 'Русагро Тех подготовила задачу для участников международного конкурса AI Challenge')

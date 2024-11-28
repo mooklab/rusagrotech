@@ -1,0 +1,116 @@
+section.stars
+    margin-top: 60px
+    margin-bottom: 65px
+    +screen(m)
+        margin-top: 40px
+        margin-bottom: 67px
+
+    div.container
+        position: relative
+
+    div.swiper
+        overflow: visible
+
+    div.swiper-slide-active
+        div.star
+            +screen(l)
+                margin: 0 20px
+            span
+                bottom: 60px
+                +screen(m)
+                    bottom: 26px
+        div.progress
+            display: block
+
+    div.progress
+        display: none
+        position: absolute
+        bottom: 36px
+        left: 60px
+        right: 60px
+        z-index: 1
+        +screen(m)
+            left: 30px
+            right: 30px
+            bottom: 12px
+        div.scale
+            width: 100%
+            height: 2px
+            background: #34c397
+
+    div.star
+        position: relative
+        transition: margin 0.2s
+        img
+            width: 100%
+            height: 573px
+            object-fit: cover
+            object-position: center center
+            +screen(s)
+                height: 324px
+        span
+            position: absolute
+            bottom: 40px
+            left: 60px
+            font-weight: 400
+            font-size: 21px
+            color: #fff
+            max-width: 440px
+            transition: all 0.2s
+            +screen(m)
+                left: 10px
+                bottom: 26px
+                font-size: 14px
+                line-height: 143%
+              
+    div.text
+        display: grid
+        justify-items: start
+        grid-gap: 40px
+        position: absolute
+        top: 0
+        right: 0
+        width: calc(50% + 60px - 22px)
+        height: max-content
+        background: white
+        padding: 60px
+        +screen(xl)
+            width: calc(75% + 60px - 22px)
+        +screen(l)
+            width: calc(50% + 60px - 22px)
+            padding: 40px
+        +screen(s)
+            display: none
+
+        span
+            font-weight: 400
+            font-size: 16px
+            color: #7a7e83
+            +screen(m)
+                font-size: 14px
+
+        &.mobile
+            position: static
+            display: none
+            +screen(s)
+                display: grid
+                width: 100%
+                grid-gap: 27px
+                padding: 0
+                padding-bottom: 40px
+
+    div.swiper-pagination
+        position: absolute
+        top: 50px
+        right: 0
+        +screen(s)
+            display: grid
+            position: static
+            justify-content: center
+            margin-top: 28px
+
+        div.arrow
+            background: white
+            border: 1px solid white
+            +screen(s)
+                border: 1px solid #C6CCCA

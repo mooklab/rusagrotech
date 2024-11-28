@@ -1,0 +1,59 @@
+section.form
+    margin-top: 60px
+    margin-bottom: 105px
+    +screen(m)
+        margin-bottom: 60px
+
+    form
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 60px 24px
+        margin-top: 42px
+        +screen(l)
+            grid-template-columns: 1fr
+            grid-gap: 24px
+
+        div.person
+            display: grid
+            align-items: start
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 24px
+            +screen(s)
+                grid-template-columns: 1fr
+                grid-gap: 6px
+
+        div.contacts
+            display: grid
+            align-items: start
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 28px 24px
+            +screen(s)
+                grid-template-columns: 1fr
+                grid-gap: 6px
+
+        div.message
+            display: grid
+            grid-template-columns: 1fr
+            grid-gap: 28px 24px
+            +screen(s)
+                grid-gap: 6px
+
+            label.upload
+                margin-top: -10px
+                +screen(s)
+                    margin-top: 18px
+
+        div.send
+            display: grid
+            grid-template-columns: max-content max-content
+            grid-gap: 43px
+            justify-content: end
+            grid-column: 2 span
+            +screen(l)
+                grid-column: 1 span
+                grid-gap: 40px
+            +screen(s)
+                margin-top: 16px
+                grid-template-columns: 1fr
+                justify-items: start
+                justify-content: start

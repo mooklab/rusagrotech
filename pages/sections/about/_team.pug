@@ -1,0 +1,36 @@
+mixin person(image, name, position)
+    div.person
+        img(src=image, alt=name)
+        span.name= name
+        span.position= position
+
+section.team
+    div.container
+
+        div.title
+            h2 Команда
+
+            div.swiper-pagination
+                div.arrow
+                    include ../../../images/swiper_pagination.svg
+                div.arrow
+                    include ../../../images/swiper_pagination.svg
+
+        div.swiper.desktop
+            div.swiper-wrapper
+                div.swiper-slide
+                    +person('images/20.webp', 'Равба Максим', 'Генеральный директор')
+                div.swiper-slide
+                    +person('images/21.webp', 'Горохов Владимир', 'Директор по развитию')
+                div.swiper-slide
+                    +person('images/22.webp', 'Тарасов Сергей', 'Технический директор')
+                div.swiper-slide
+                    +person('images/23.webp', 'Должиков Павел', 'Директор по инфраструктуре и технической поддержке информационных технологий')
+                div.swiper-slide
+                    +person('images/20.webp', 'Равба Максим', 'Генеральный директор')
+                div.swiper-slide
+                    +person('images/21.webp', 'Горохов Владимир', 'Директор по развитию')
+                div.swiper-slide
+                    +person('images/22.webp', 'Тарасов Сергей', 'Технический директор')
+                div.swiper-slide
+                    +person('images/23.webp', 'Должиков Павел', 'Директор по инфраструктуре и технической поддержке информационных технологий')

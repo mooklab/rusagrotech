@@ -1,0 +1,31 @@
+include ../../common/pug/_mixins.pug
+
+mixin project(image, title)
+    a(href="project.html").project
+        div.image
+            img(src=image, alt=title)
+        span= title
+
+section.projects
+    div.container
+
+        div.filter
+            fieldset.search
+                input(type="text", placeholder="Поиск")
+                img(src="images/search.svg", alt="")
+                div.results
+                    a(href="index.html") Национальные #[b премии]
+                    a(href="index.html") Национальные #[b награды]
+            +select('sort', 'Сначало новые', 'Сначало новые', 'Сначало старые')
+
+        div.list
+            +project('images/10.webp', 'Стартовал приём заявок национальной премии за вклад в развитие технологий искусственного интеллекта «Лидеры ИИ»')
+            +project('images/11.webp', 'Завершен первый этап проекта доработки и внедрения цифровой платформы (системы класса MES)')
+            +project('images/12.webp', 'Русагро Тех подготовила задачу для участников международного конкурса AI Challenge')
+            +project('images/13.webp', 'Русагро Тех поделились опытом цифровизации и внедрения искусственного интеллекта в проекты')
+            +project('images/14.webp', 'Стартовал приём заявок национальной премии за вклад в развитие технологий искусственного интеллекта «Лидеры ИИ»')
+            +project('images/15.webp', 'Завершен первый этап проекта доработки и внедрения цифровой платформы (системы класса MES)')
+            +project('images/16.webp', 'Русагро Тех подготовила задачу для участников международного конкурса AI Challenge')
+            +project('images/17.webp', 'Русагро Тех поделились опытом цифровизации и внедрения искусственного интеллекта в проекты')
+
+        a.button смотреть еще

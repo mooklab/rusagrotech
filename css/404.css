@@ -1,0 +1,66 @@
+section.error {
+  margin-top: 196px;
+  margin-bottom: 128px;
+}
+section.error div.container {
+  display: grid;
+  justify-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+  grid-gap: 36px;
+}
+@media (max-width: 960px) {
+  section.error div.container {
+    grid-gap: 40px;
+  }
+}
+section.error h1 {
+  font-weight: 400;
+  font-size: 160px;
+  text-transform: uppercase;
+  color: #34c397;
+  margin-top: -24px;
+  margin-bottom: -30px;
+}
+@media (max-width: 960px) {
+  section.error h1 {
+    font-size: 120px;
+    margin-top: -22px;
+    margin-bottom: -26px;
+  }
+}
+section.error h2 {
+  font-weight: 400;
+  font-size: 68px;
+  text-transform: uppercase;
+  color: #1c252e;
+}
+@media (max-width: 960px) {
+  section.error h2 {
+    font-size: 28px;
+  }
+}
+section.error span {
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  color: #7a7e83;
+  max-width: 704px;
+}
+section.error a.button {
+  margin-top: 10px;
+}
+@media (max-width: 960px) {
+  section.error a.button {
+    margin-top: unset;
+  }
+}
+section.error img {
+  position: absolute;
+  top: calc(50% - 26px);
+  left: calc(50% - 30px);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}/*# sourceMappingURL=404.css.map */

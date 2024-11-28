@@ -1,0 +1,54 @@
+section.brandbook
+    margin-top: 65px
+    margin-bottom: 60px
+    +screen(m)
+        margin-top: 60px
+
+    div.container
+        display: grid
+        align-items: center
+        align-content: center
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-areas: 'Title Logo' 'Text Logo' 'Button Logo'
+        grid-gap: 40px 60px
+        border-top: 1px solid #C6CCCA
+        padding-top: 60px
+        +screen(s)
+            grid-template-columns: 1fr
+            grid-template-areas: 'Title' 'Text' 'Logo' 'Button'
+            grid-gap: 28px
+            border: unset
+            padding-top: unset
+
+    h2
+        grid-area: Title
+
+    p
+        grid-area: Text
+        font-weight: 400
+        font-size: 15px
+        color: #7a7e83
+        max-width: 638px
+
+    a.button
+        grid-area: Button
+        display: grid
+        grid-template-columns: max-content max-content
+        align-items: center
+        grid-gap: 10px
+        width: max-content
+        padding-top: 8px
+        padding-bottom: 8px
+        span
+            color: #5c5c5c
+        &:hover
+            svg
+                path
+                    stroke: white
+            span
+                color: white
+
+    img.logotype
+        grid-area: Logo
+        width: 100%
+        max-width: 580px

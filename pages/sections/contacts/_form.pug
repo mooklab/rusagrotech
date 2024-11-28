@@ -1,0 +1,60 @@
+section.form
+    div.container
+
+        h2 формы обратной связи для СМИ 
+
+        form(action="")
+
+            div.person
+                fieldset.text
+                    input(type="text" placeholder=" " required)
+                    span Имя
+                    div.error введите свое имя
+                fieldset.text
+                    input(type="text" placeholder=" " required)
+                    span Фамилия
+                    div.error введите свою фамилию
+
+            div.contacts
+                fieldset.text
+                    input(type="text" placeholder=" ")
+                    span Название СМИ
+                fieldset.text
+                    input(type="text" placeholder=" ")
+                    span Должность
+                fieldset.text
+                    input(type="email" placeholder=" " required)
+                    span Электронная почта
+                    div.error введите свою почту
+                fieldset.text
+                    input(type="email" placeholder=" " required)
+                    span Телефон
+                    div.error введите свой телефон
+
+            div.title
+                fieldset.text
+                    input(type="text" placeholder=" ")
+                    span Тема обращения
+
+            div.message
+                fieldset.text
+                    input(type="text" placeholder=" ")
+                    span Сообщение
+                fieldset.text
+                    input(type="text" placeholder=" ")
+                    span Ссылка на публикацию
+                label.upload
+                    div.icon
+                        img(src="images/upload_plus.svg", alt="").plus
+                        img(src="images/upload_tick.svg", alt="").tick
+                    input(type="file", name="", onchange="upload(this)")
+                    span.name
+                    span.default Прикрепить файл
+
+            div.send
+                label.checkbox
+                    input(type="checkbox", name="")
+                    div.tick
+                        img(src="images/checkbox_tick.svg", alt="")
+                    span Нажимая на кнопку сохранить вы соглашаетесь #[br]на обработку персональных данных
+                button Отправить

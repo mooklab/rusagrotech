@@ -1,0 +1,66 @@
+section.team
+    margin-top: 60px
+    margin-bottom: 71px
+    +screen(m)
+        margin-top: 40px
+        margin-bottom: 60px
+
+    div.title
+        display: grid
+        align-items: center
+        grid-template-columns: 1fr max-content
+        grid-gap: 34px
+        margin-bottom: 40px
+        +screen(m)
+            margin-bottom: 28px
+        +screen(s)
+            grid-template-columns: 1fr max-content
+
+        a.button
+            justify-self: start
+    
+    div.person
+        display: grid
+        align-content: start
+        grid-gap: 24px
+        padding-bottom: 40px
+        border-bottom: 1px solid #ebebeb
+        height: 100%
+        +screen(s)
+            border: unset
+            padding-bottom: unset
+
+        img
+            width: 100%
+            height: 330px
+            object-fit: cover
+            object-position: center center
+
+        span.name
+            font-weight: 300
+            font-size: 18px
+            color: #000
+
+        span.position
+            font-weight: 400
+            font-size: 15px
+            color: #7a7e83
+
+    div.swiper
+        +screen(s)
+            overflow: visible
+
+    div.swiper-wrapper
+        +screen(s)
+            transform: unset !important
+
+    div.swiper-slide
+        height: auto !important
+        overflow: hidden
+
+        +screen(s)
+            overflow: visible
+            &:nth-child(4)
+                margin-bottom: unset !important
+            &:nth-child(n + 5)
+                display: none

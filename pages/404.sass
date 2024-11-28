@@ -1,0 +1,52 @@
+@import common/sass/_mixins
+    
+section.error
+    margin-top: 196px
+    margin-bottom: 128px
+
+    div.container
+        display: grid
+        justify-items: center
+        align-content: center
+        text-align: center
+        grid-gap: 36px
+        +screen(m)
+            grid-gap: 40px
+
+    h1
+        font-weight: 400
+        font-size: 160px
+        text-transform: uppercase
+        color: #34c397
+        margin-top: -24px
+        margin-bottom: -30px
+        +screen(m)
+            font-size: 120px
+            margin-top: -22px
+            margin-bottom: -26px
+
+    h2
+        font-weight: 400
+        font-size: 68px
+        text-transform: uppercase
+        color: #1c252e
+        +screen(m)
+            font-size: 28px
+
+    span
+        font-weight: 400
+        font-size: 16px
+        text-align: center
+        color: #7a7e83
+        max-width: 704px
+
+    a.button
+        margin-top: 10px
+        +screen(m)
+            margin-top: unset
+
+    img
+        position: absolute
+        top: calc(50% - 26px)
+        left: calc(50% - 30px)
+        transform: translate(-50%, -50%)

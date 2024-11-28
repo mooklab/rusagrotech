@@ -1,0 +1,123 @@
+section.history
+    margin-top: 65px
+    margin-bottom: 60px
+
+    div.swiper.images
+        overflow: visible
+        margin-top: 45px
+        img
+            width: 100%
+            height: 571px
+            object-fit: cover
+            +screen(m)
+                height: 324px
+
+        div.swiper-slide
+            transition: all 0.3s
+
+        div.swiper-slide-active
+            +screen(l)
+                padding: 0 20px
+
+    div.swiper.years
+        margin-top: 64px
+        overflow: visible
+        +screen(m)
+            margin-top: 24px
+
+        div.swiper-slide
+            display: grid
+            font-weight: 400
+            font-size: 16px
+            transition: all 0.3s
+            cursor: pointer
+            +screen(m)
+                font-size: 14px
+                justify-items: center
+                text-align: center
+
+            &::before
+                content: ''
+                display: block
+                width: 16px
+                height: 16px
+                border-radius: 8px
+                background: #C6CCCA
+                margin-bottom: 21px
+
+            &::after
+                content: ''
+                position: absolute
+                top: 8px
+                left: 0
+                display: block
+                width: 100%
+                height: 1px
+                border-radius: 8px
+                background: #C6CCCA
+                z-index: -1
+            
+        div.swiper-slide-thumb-active
+            font-weight: 400
+            font-size: 21px
+            +screen(m)
+                font-size: 14px
+
+            &:before
+                width: 24px
+                height: 24px
+                border-radius: 12px
+                background: #34C397
+                margin-top: -4px
+                margin-bottom: 17px
+
+            &::after
+                background: #34C397
+                +screen(m)
+                    background: #C6CCCA
+
+
+    div.swiper.texts
+        padding-top: 60px
+        padding-bottom: 60px
+        border-bottom: 1px solid #d7d7d7
+        +screen(m)
+            padding-top: 40px
+        +screen(s)
+            border-bottom: unset
+            padding-bottom: unset
+
+        div.swiper-slide
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 104px
+            padding: 0 170px
+            +screen(l)
+                padding: unset
+            +screen(m)
+                grid-template-columns: 1fr
+                grid-gap: 40px
+
+            strong
+                font-weight: 400
+                font-size: 21px
+                color: #1c252e
+                +screen(m)
+                    font-size: 18px
+
+            span
+                font-weight: 400
+                font-size: 16px
+                color: #7a7e83
+                +screen(m)
+                    font-weight: 300
+                    font-size: 15px
+                    line-height: 140%
+                    color: #7a7e83
+
+    div.swiper-pagination
+        display: none
+        margin-top: 40px
+        +screen(s)
+            display: grid
+            justify-content: center

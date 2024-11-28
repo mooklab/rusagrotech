@@ -1,0 +1,23 @@
+section.map
+    div.container
+
+        h1 Контакты
+
+        div.list
+            div.contact
+                strong Адрес
+                span 115054, город Москва, Валовая ул., д. 35
+            div.contact
+                strong Телефон
+                span: a(href="tel:+7 495 363 1661") +7 495 363 1661
+            div.contact
+                strong Почта
+                span: a(href="mailto:contact@rusagro.tech") contact@rusagro.tech
+            div.contact
+                strong Пресс-служба
+                span: a(href="mailto:press@rusagro.tech") press@rusagro.tech
+
+        div#map
+
+    script(defer, src="scripts/map.js")
+    script(src="https://api-maps.yandex.ru/2.1/?lang=ru-RU", type="text/javascript")

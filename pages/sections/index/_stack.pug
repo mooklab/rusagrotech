@@ -1,0 +1,45 @@
+mixin stack(image, title)
+    div.stack
+        div.ai
+            div.image
+                img(src=image, alt=title)
+            div.description
+                img(src="images/stack_1.svg")
+                strong= title
+                p Мы верим, что цифровые технологии могут преобразить агропромышленный комплекс.Сделать его более эффективным, устойчивым и прибыльным. Дать новые возможности для развития бизнеса и реализации смелых идей. #[br]#[br]Мы верим, что цифровые технологии могут преобразить агропромышленный комплекс.
+        div.advantages
+            div.advantage
+                img(src="images/stack_2.svg", alt="")
+                span Математическое моделирование
+            div.advantage
+                img(src="images/stack_3.svg", alt="")
+                span Беспилотные летательные аппараты
+            div.advantage
+                img(src="images/stack_4.svg", alt="")
+                span Большие данные
+            div.advantage
+                img(src="images/stack_5.svg", alt="")
+                span Оптимизационное моделирование
+
+section.stack
+    div.container
+
+        div.title
+            h2 СТЕК ТехнологиЙ
+
+            div.swiper-pagination
+                div.arrow
+                    include ../../../images/swiper_pagination.svg
+                div.arrow
+                    include ../../../images/swiper_pagination.svg
+
+        div.swiper.desktop
+            div.swiper-wrapper
+                div.swiper-slide
+                    +stack('images/2.webp', 'Искусственный интеллект, машинное обучение')
+                div.swiper-slide
+                    +stack('images/2.webp', 'Искусственный интеллект, машинное обучение')
+                div.swiper-slide
+                    +stack('images/2.webp', 'Искусственный интеллект, машинное обучение')
+                div.swiper-slide
+                    +stack('images/2.webp', 'Искусственный интеллект, машинное обучение')
