@@ -2,6 +2,12 @@ section.error {
   margin-top: 196px;
   margin-bottom: 128px;
 }
+@media (max-width: 960px) {
+  section.error {
+    margin-top: 71px;
+    margin-bottom: 71px;
+  }
+}
 section.error div.container {
   display: grid;
   justify-items: center;

@@ -184,6 +184,11 @@ section.news div.title {
 section.news div.title a.button {
   justify-self: start;
 }
+@media (max-width: 960px) {
+  section.news div.title h2 {
+    font-size: 40px;
+  }
+}
 @media (max-width: 640px) {
   section.news div.swiper {
     overflow: visible;

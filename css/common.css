@@ -204,11 +204,15 @@ h1 {
   font-size: 112px;
   line-height: 105%;
   text-transform: uppercase;
+  margin-top: -10px;
+  margin-bottom: -14px;
 }
 @media (max-width: 960px) {
   h1 {
     font-size: 48px;
     line-height: 112%;
+    margin-top: -10px;
+    margin-bottom: -12px;
   }
 }
 
@@ -241,12 +245,6 @@ button, a.button {
   -webkit-transition: all 0.15s;
   transition: all 0.15s;
 }
-@media (max-width: 960px) {
-  button, a.button {
-    font-size: 11px;
-    line-height: 8px;
-  }
-}
 button span, a.button span {
   font-weight: 400;
   font-size: 14px;
@@ -256,6 +254,9 @@ button span, a.button span {
 button:hover, a.button:hover {
   background: #34C397 !important;
   border: 1px solid #34C397 !important;
+  color: white !important;
+}
+button:hover span, a.button:hover span {
   color: white !important;
 }
 
@@ -304,8 +305,8 @@ div.swiper-pagination div.arrow:first-child {
           transform: rotate(180deg);
 }
 div.swiper-pagination div.arrow:hover {
-  background: #34C397 !important;
-  border: 1px solid #34C397 !important;
+  background: #6AD0F8 !important;
+  border: 1px solid #6AD0F8 !important;
 }
 div.swiper-pagination div.arrow:hover svg path {
   fill: white;
@@ -363,13 +364,19 @@ fieldset.select div.select_current:focus div.arrow {
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
-fieldset.select div.select_current:focus div.arrow svg path {
-  stroke: #C6D50A;
-}
 fieldset.select div.select_current:focus + div.select_list {
   opacity: 1;
   -webkit-animation-name: none;
           animation-name: none;
+}
+fieldset.select div.select_current div.arrow {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 fieldset.select div.select_list {
   display: block;
@@ -554,6 +561,11 @@ fieldset.text span {
   font-size: 15px;
   color: #7a7e83;
 }
+@media (max-width: 960px) {
+  fieldset.text span {
+    font-size: 14px;
+  }
+}
 fieldset.text div.error {
   display: none;
   position: absolute;
@@ -579,6 +591,13 @@ label.checkbox {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+@media (max-width: 960px) {
+  label.checkbox {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
 }
 label.checkbox input {
   display: none;
@@ -694,6 +713,18 @@ a.project div.image:hover img {
   left: -20px;
   width: calc(100% + 40px);
   height: calc(100% + 40px);
+}
+a.project::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 0;
+  background: #34C397;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+a.project:hover::after {
+  width: 100%;
 }
 
 *.afl {
@@ -991,6 +1022,29 @@ footer menu a {
   font-size: 12px;
   text-transform: uppercase;
   white-space: nowrap;
+  position: relative;
+}
+footer menu a::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: -12px;
+  display: block;
+  width: 0px;
+  height: 3px;
+  background: #34C397;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+footer menu a:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: -12px;
+  display: block;
+  width: calc(100% + 24px);
+  height: 3px;
+  background: #34C397;
 }
 footer menu a:first-child {
   display: -webkit-box;
@@ -1089,6 +1143,16 @@ header menu a::after {
   transition: all 0.3s;
 }
 header menu a:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -12px;
+  display: block;
+  width: calc(100% + 24px);
+  height: 3px;
+  background: #34C397;
+}
+header menu a.active::after {
   content: "";
   position: absolute;
   bottom: 0;

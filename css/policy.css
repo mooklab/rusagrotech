@@ -15,6 +15,7 @@ section.policy div.container h2 {
   justify-self: center;
   text-align: center;
   max-width: 672px;
+  margin-bottom: 69px;
 }
 @media (max-width: 960px) {
   section.policy div.container h2 {
@@ -22,6 +23,7 @@ section.policy div.container h2 {
     text-align: left;
     border-bottom: 1px solid #c6ccca;
     padding-bottom: 28px;
+    margin-bottom: unset;
   }
 }
 section.policy div.container strong {

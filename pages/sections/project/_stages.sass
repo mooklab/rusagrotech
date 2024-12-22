@@ -62,6 +62,9 @@ section.stages
                     height: 16px
                     background: #C6CCCA
                     border-radius: 8px
+                    +screen(m)
+                        width: 24px
+                        height: 24px
             
         div.swiper-slide-thumb-active
             div.stage
@@ -89,6 +92,7 @@ section.stages
             grid-template-columns: repeat(2, 1fr)
             grid-gap: 24px
             margin-top: 50px
+            height: auto
             +screen(m)
                 grid-template-columns: 1fr
             +screen(s)
@@ -103,44 +107,66 @@ section.stages
                     height: 444px
 
             div.text
-                display: grid
-                justify-items: start
                 padding-top: 38px
                 padding-left: 44px
+                height: 100%
+                overflow: hidden
+
                 +screen(l)
                     padding-left: unset
                 +screen(m)
                     padding-top: unset
 
                 strong
+                    display: block
                     font-weight: 400
                     font-size: 16px
                     line-height: 137%
-                    margin-top: 60px
+                    margin-top: 40px
+                    margin-bottom: 40px
                     +screen(m)
                         margin-top: 40px
-                    & + p
-                        margin-top: 60px
-                        +screen(m)
-                            margin-top: 40px
+                        margin-bottom: 40px
+
+                    &:last-child
+                        margin-bottom: 20px
 
                 p, span
                     font-weight: 300
                     font-size: 15px
                     line-height: 140%
                     color: #7a7e83
-                    margin-top: 21px
+                    margin-top: 20px
+                    margin-bottom: 20px
                     +screen(m)
                         font-weight: 500
                         font-size: 14px
                         line-height: 150%
-                        margin-top: 40px
+
+                div.hide
+                    display: none
+                    &.show
+                        display: block
 
                 button
-                    margin-top: 40px
+                    display: block
+                    margin-top: 20px
                     min-width: 147px
                     +screen(m)
-                        justify-self: center
+                        margin-left: auto
+                        margin-right: auto
+                        margin-top: 40px
+
+                    span:first-child
+                        display: inline
+                    span:last-child
+                        display: none
+
+                    &.show
+                        span:first-child
+                            display: none
+                        span:last-child
+                            display: inline
 
     div.swiper-pagination
         margin-bottom: 40px

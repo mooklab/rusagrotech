@@ -6,3 +6,8 @@ block links
 block content
     include sections/news/_articles.pug
     include sections/news/_news.pug
+
+    script.
+        activeMenu = document.querySelector('header menu a[href="news.html"]')
+        activeMenu.classList.add('active')
+        

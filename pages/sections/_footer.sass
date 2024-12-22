@@ -58,6 +58,28 @@ footer
             font-size: 12px
             text-transform: uppercase
             white-space: nowrap
+            position: relative
+            &::after
+                content: ''
+                position: absolute
+                bottom: -20px
+                left: -12px
+                display: block
+                width: 0px
+                height: 3px
+                background: #34C397
+                transition: all .3s
+
+            &:hover
+                &::after
+                    content: ''
+                    position: absolute
+                    bottom: -20px
+                    left: -12px
+                    display: block
+                    width: calc(100% + 24px)
+                    height: 3px
+                    background: #34C397
 
         a:first-child
             display: flex

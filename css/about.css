@@ -124,14 +124,26 @@ section.team div.person span.name {
   font-size: 18px;
   color: #000;
 }
+@media (max-width: 960px) {
+  section.team div.person span.name {
+    font-size: 16px;
+  }
+}
 section.team div.person span.position {
   font-weight: 400;
   font-size: 15px;
   color: #7a7e83;
 }
+@media (max-width: 960px) {
+  section.team div.person span.position {
+    font-size: 14px;
+  }
+}
 @media (max-width: 640px) {
   section.team div.swiper {
     overflow: visible;
+    -ms-touch-action: unset;
+        touch-action: unset;
   }
 }
 @media (max-width: 640px) {
@@ -404,6 +416,7 @@ section.career div.accordion div.accordion_content div.accordion_wrap {
   section.career div.accordion div.accordion_content div.accordion_wrap {
     padding-left: unset;
     grid-gap: 28px;
+    padding-top: 14px;
   }
 }
 section.career div.accordion div.accordion_content div.text {
@@ -455,7 +468,7 @@ section.career div.accordion.open div.accordion_caption div.icon img:last-child 
 }
 
 section.conditions {
-  margin-top: 65px;
+  margin-top: 60px;
   margin-bottom: 60px;
 }
 @media (max-width: 640px) {
@@ -472,6 +485,11 @@ section.conditions div.title {
   grid-template-columns: 1fr max-content;
   grid-gap: 34px;
   margin-bottom: 40px;
+}
+@media (max-width: 960px) {
+  section.conditions div.title {
+    margin-bottom: 28px;
+  }
 }
 section.conditions div.text {
   display: grid;

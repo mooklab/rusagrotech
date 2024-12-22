@@ -40,15 +40,20 @@ section.team
             font-weight: 300
             font-size: 18px
             color: #000
+            +screen(m)
+                font-size: 16px
 
         span.position
             font-weight: 400
             font-size: 15px
             color: #7a7e83
+            +screen(m)
+                font-size: 14px
 
     div.swiper
         +screen(s)
             overflow: visible
+            touch-action: unset
 
     div.swiper-wrapper
         +screen(s)

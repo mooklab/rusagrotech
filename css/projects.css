@@ -45,7 +45,9 @@ section.main p {
   font-weight: 400;
   font-size: 21px;
   color: white;
-  max-width: 584px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   margin-bottom: 13px;
 }
 @media (max-width: 960px) {
@@ -53,6 +55,12 @@ section.main p {
     font-size: 14px;
     margin-bottom: 24px;
     max-width: 259px;
+    width: 100%;
+  }
+}
+@media (max-width: 960px) {
+  section.main p br {
+    display: none;
   }
 }
 
@@ -62,7 +70,7 @@ section.projects {
 }
 @media (max-width: 960px) {
   section.projects {
-    margin-top: 40px;
+    margin-top: 24px;
   }
 }
 section.projects div.container {
@@ -83,7 +91,7 @@ section.projects div.filter {
   section.projects div.filter {
     grid-template-columns: 1fr;
     grid-gap: 30px;
-    margin-bottom: 24px;
+    margin-bottom: 14px;
   }
 }
 section.projects div.filter fieldset.search {
@@ -102,6 +110,7 @@ section.projects div.filter fieldset.search input {
 @media (max-width: 960px) {
   section.projects div.filter fieldset.search input {
     font-size: 18px;
+    padding: 21px 0;
   }
 }
 section.projects div.filter fieldset.search img {

@@ -77,7 +77,7 @@ section.stack {
 }
 section.stack div.container {
   display: grid;
-  grid-gap: 40px;
+  grid-gap: 60px;
 }
 @media (max-width: 960px) {
   section.stack div.container {
@@ -103,6 +103,7 @@ section.stack div.advantages div.advantage {
       align-content: end;
   border: 1px solid #c6ccca;
   padding: 40px 24px;
+  min-height: 188px;
 }
 @media (max-width: 960px) {
   section.stack div.advantages div.advantage {
@@ -112,7 +113,6 @@ section.stack div.advantages div.advantage {
         align-content: start;
     padding: 24px;
     overflow: hidden;
-    min-height: 188px;
   }
 }
 
@@ -197,6 +197,12 @@ section.stages div.swiper.tabs div.stage div.text::before {
   background: #C6CCCA;
   border-radius: 8px;
 }
+@media (max-width: 960px) {
+  section.stages div.swiper.tabs div.stage div.text::before {
+    width: 24px;
+    height: 24px;
+  }
+}
 section.stages div.swiper.tabs div.swiper-slide-thumb-active div.stage {
   background: #EBF9F5;
 }
@@ -231,6 +237,7 @@ section.stages div.swiper.contents div.swiper-slide {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 24px;
   margin-top: 50px;
+  height: auto;
 }
 @media (max-width: 960px) {
   section.stages div.swiper.contents div.swiper-slide {
@@ -256,10 +263,10 @@ section.stages div.swiper.contents div.swiper-slide img {
   }
 }
 section.stages div.swiper.contents div.swiper-slide div.text {
-  display: grid;
-  justify-items: start;
   padding-top: 38px;
   padding-left: 44px;
+  height: 100%;
+  overflow: hidden;
 }
 @media (max-width: 1280px) {
   section.stages div.swiper.contents div.swiper-slide div.text {
@@ -272,47 +279,66 @@ section.stages div.swiper.contents div.swiper-slide div.text {
   }
 }
 section.stages div.swiper.contents div.swiper-slide div.text strong {
+  display: block;
   font-weight: 400;
   font-size: 16px;
   line-height: 137%;
-  margin-top: 60px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 @media (max-width: 960px) {
   section.stages div.swiper.contents div.swiper-slide div.text strong {
     margin-top: 40px;
+    margin-bottom: 40px;
   }
 }
-section.stages div.swiper.contents div.swiper-slide div.text strong + p {
-  margin-top: 60px;
-}
-@media (max-width: 960px) {
-  section.stages div.swiper.contents div.swiper-slide div.text strong + p {
-    margin-top: 40px;
-  }
+section.stages div.swiper.contents div.swiper-slide div.text strong:last-child {
+  margin-bottom: 20px;
 }
 section.stages div.swiper.contents div.swiper-slide div.text p, section.stages div.swiper.contents div.swiper-slide div.text span {
   font-weight: 300;
   font-size: 15px;
   line-height: 140%;
   color: #7a7e83;
-  margin-top: 21px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 @media (max-width: 960px) {
   section.stages div.swiper.contents div.swiper-slide div.text p, section.stages div.swiper.contents div.swiper-slide div.text span {
     font-weight: 500;
     font-size: 14px;
     line-height: 150%;
-    margin-top: 40px;
   }
 }
+section.stages div.swiper.contents div.swiper-slide div.text div.hide {
+  display: none;
+}
+section.stages div.swiper.contents div.swiper-slide div.text div.hide.show {
+  display: block;
+}
 section.stages div.swiper.contents div.swiper-slide div.text button {
-  margin-top: 40px;
+  display: block;
+  margin-top: 20px;
   min-width: 147px;
 }
 @media (max-width: 960px) {
   section.stages div.swiper.contents div.swiper-slide div.text button {
-    justify-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
   }
+}
+section.stages div.swiper.contents div.swiper-slide div.text button span:first-child {
+  display: inline;
+}
+section.stages div.swiper.contents div.swiper-slide div.text button span:last-child {
+  display: none;
+}
+section.stages div.swiper.contents div.swiper-slide div.text button.show span:first-child {
+  display: none;
+}
+section.stages div.swiper.contents div.swiper-slide div.text button.show span:last-child {
+  display: inline;
 }
 section.stages div.swiper-pagination {
   margin-bottom: 40px;

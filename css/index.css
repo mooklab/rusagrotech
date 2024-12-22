@@ -26,11 +26,12 @@ section.main div.swiper.images img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center center;
-     object-position: center center;
+  -o-object-position: center right;
+     object-position: center right;
 }
 section.main div.swiper.texts {
   overflow: visible;
+  counter-reset: slides;
 }
 section.main div.swiper.texts div.swiper-slide {
   display: grid;
@@ -38,6 +39,7 @@ section.main div.swiper.texts div.swiper-slide {
   opacity: 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  counter-increment: slides;
 }
 @media (max-width: 960px) {
   section.main div.swiper.texts div.swiper-slide {
@@ -58,7 +60,9 @@ section.main div.swiper.texts div.swiper-slide p {
   font-weight: 400;
   font-size: 21px;
   color: white;
-  max-width: 584px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   margin-bottom: 13px;
 }
 @media (max-width: 960px) {
@@ -66,6 +70,12 @@ section.main div.swiper.texts div.swiper-slide p {
     font-size: 14px;
     margin-bottom: 24px;
     max-width: 259px;
+    width: 100%;
+  }
+}
+@media (max-width: 960px) {
+  section.main div.swiper.texts div.swiper-slide p br {
+    display: none;
   }
 }
 section.main div.swiper.texts div.swiper-slide a.button {
@@ -74,6 +84,21 @@ section.main div.swiper.texts div.swiper-slide a.button {
 }
 section.main div.swiper.texts div.swiper-slide.swiper-slide-active {
   opacity: 1;
+}
+section.main div.swiper.texts div.swiper-slide::before {
+  content: "0" counter(slides);
+  position: absolute;
+  top: -13px;
+  left: -5px;
+  font-family: Stapel;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  -webkit-transform: translate(-100%, -100%);
+      -ms-transform: translate(-100%, -100%);
+          transform: translate(-100%, -100%);
 }
 section.main div.swiper.tabs {
   position: absolute;
@@ -100,7 +125,7 @@ section.main div.swiper.tabs div.swiper-slide {
   font-weight: 400;
   font-size: 11px;
   letter-spacing: 0.02em;
-  color: white;
+  color: rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
   padding-bottom: 12px;
   height: auto;
@@ -117,18 +142,19 @@ section.main div.swiper.tabs div.swiper-slide::before {
   font-weight: 400;
   font-size: 10px;
   text-transform: uppercase;
+  color: white;
 }
 section.main div.swiper.tabs div.swiper-slide.swiper-slide-thumb-active {
   border-bottom: 1px solid #34c397;
+  color: rgb(255, 255, 255);
 }
 
 section.stars {
-  margin-top: 60px;
+  margin-top: 40px;
   margin-bottom: 65px;
 }
 @media (max-width: 960px) {
   section.stars {
-    margin-top: 40px;
     margin-bottom: 67px;
   }
 }
@@ -206,6 +232,7 @@ section.stars div.star span {
 @media (max-width: 960px) {
   section.stars div.star span {
     left: 10px;
+    right: 10px;
     bottom: 26px;
     font-size: 14px;
     line-height: 143%;
@@ -295,7 +322,7 @@ section.news {
 }
 @media (max-width: 960px) {
   section.news {
-    margin-top: 67px;
+    margin-top: 60px;
     margin-bottom: 60px;
   }
 }
@@ -326,6 +353,8 @@ section.news div.title a.button {
 @media (max-width: 640px) {
   section.news div.swiper {
     overflow: visible;
+    -ms-touch-action: unset;
+        touch-action: unset;
   }
 }
 @media (max-width: 640px) {
@@ -423,7 +452,7 @@ section.stack div.stack div.ai {
 section.stack div.stack div.ai div.image {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 100%;
 }
 @media (max-width: 960px) {
   section.stack div.stack div.ai div.image {
@@ -500,6 +529,7 @@ section.stack div.stack div.advantages div.advantage {
         align-content: start;
     padding: 24px;
     overflow: hidden;
+    min-height: 188px;
   }
 }
 

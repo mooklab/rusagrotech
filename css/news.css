@@ -105,7 +105,7 @@ section.articles div.article div.text {
   display: grid;
   justify-items: start;
   grid-gap: 40px;
-  padding-left: 44px;
+  padding-left: 36px;
 }
 @media (max-width: 1280px) {
   section.articles div.article div.text {
@@ -139,7 +139,7 @@ section.articles div.article div.text a.button {
 }
 @media (max-width: 960px) {
   section.articles div.article div.text a.button {
-    margin-top: unset;
+    margin-top: 4px;
   }
 }
 
@@ -178,4 +178,8 @@ section.news div.list {
     grid-template-columns: 1fr;
     margin-bottom: 60px;
   }
+}
+section.news div.list a.article:last-child {
+  padding-bottom: unset;
+  border-bottom: unset;
 }/*# sourceMappingURL=news.css.map */

@@ -34,9 +34,14 @@ section.main
         font-weight: 400
         font-size: 21px
         color: white
-        max-width: 584px
+        // max-width: 584px
+        width: max-content
         margin-bottom: 13px
         +screen(m)
             font-size: 14px
             margin-bottom: 24px
             max-width: 259px
+            width: 100%
+        br
+            +screen(m)
+                display: none

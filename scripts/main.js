@@ -22,7 +22,6 @@ mainTexts.controller.control = mainImages
 
 
 
-
 const historyImages = new Swiper('section.history div.swiper.images', {
     slidesPerView: 1,
     centeredSlides: true,
@@ -51,6 +50,7 @@ const historyYears = new Swiper('section.history div.swiper.years', {
 })
 const historyTexts = new Swiper('section.history div.swiper.texts', {
     slidesPerView: 1,
+    autoHeight: true,
     navigation: {
         prevEl: 'section.history div.swiper-pagination div.arrow:first-child',
         nextEl: 'section.history div.swiper-pagination div.arrow:last-child',
@@ -158,6 +158,7 @@ new Swiper('section.stars div.swiper', {
     slidesPerView: 1,
     centeredSlides: true,
     centeredSlidesBounds: true,
+    slideToClickedSlide: true,
     spaceBetween: 0,
     loop: true,
     autoplay: {
@@ -188,11 +189,11 @@ new Swiper('section.team div.swiper', {
     slidesPerView: 1,
     spaceBetween: 40,
     direction: 'vertical',
+    enabled: false,
     navigation: {
         prevEl: 'section.team div.swiper-pagination div.arrow:first-child',
         nextEl: 'section.team div.swiper-pagination div.arrow:last-child',
     },
-    enabled: false,
     breakpoints: {
         640: {
             slidesPerView: 2,
