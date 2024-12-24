@@ -61,6 +61,7 @@ const historyTexts = new Swiper('section.history div.swiper.texts', {
     }
 })
 historyTexts.controller.control = historyImages
+historyImages.controller.control = historyTexts
 
 
 
