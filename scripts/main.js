@@ -26,9 +26,8 @@ const historyImages = new Swiper('section.history div.swiper.images', {
     slidesPerView: 1,
     centeredSlides: true,
     centeredSlidesBounds: true,
-    initialSlide: 2,
+    initialSlide: 1,
     spaceBetween: 0,
-    loop: true,
     navigation: {
         prevEl: 'section.stars div.swiper-pagination div.arrow:first-child',
         nextEl: 'section.stars div.swiper-pagination div.arrow:last-child',
@@ -42,6 +41,7 @@ const historyImages = new Swiper('section.history div.swiper.images', {
 })
 const historyYears = new Swiper('section.history div.swiper.years', {
     slidesPerView: 3,
+    initialSlide: 1,
     breakpoints: {
         640: {
             slidesPerView: 4
@@ -50,6 +50,7 @@ const historyYears = new Swiper('section.history div.swiper.years', {
 })
 const historyTexts = new Swiper('section.history div.swiper.texts', {
     slidesPerView: 1,
+    initialSlide: 1,
     autoHeight: true,
     navigation: {
         prevEl: 'section.history div.swiper-pagination div.arrow:first-child',
@@ -59,8 +60,7 @@ const historyTexts = new Swiper('section.history div.swiper.texts', {
         swiper: historyYears
     }
 })
-
-
+historyTexts.controller.control = historyImages
 
 
 
@@ -106,6 +106,10 @@ const aboutYears = new Swiper('section.about div.swiper.years', {
 const aboutTexts = new Swiper('section.about div.swiper.texts', {
     slidesPerView: 1,
     autoHeight: true,
+    navigation: {
+        prevEl: 'section.about div.swiper-pagination div.arrow:first-child',
+        nextEl: 'section.about div.swiper-pagination div.arrow:last-child',
+    },
     thumbs: {
         swiper: aboutYears
     }
