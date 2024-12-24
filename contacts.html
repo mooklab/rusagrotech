@@ -29,12 +29,13 @@
         <script defer src="scripts/main.js"></script>
         <script defer src="scripts/observer.js"></script>
         <script defer src="scripts/accordion.js"></script>
+        <script defer src="scripts/phone.js"></script>
     </head>
     <body>
         <header>
             <div class="container"><a class="logotype" href="index.html"><img src="images/logotype.svg" alt="РУСАГРО ТEX"></a>
                 <menu><a href="projects.html">Проекты </a><a href="about.html">О нас</a><a href="news.html">Новости</a><a href="contacts.html">Контакты</a></menu>
-                <div class="mobile_menu"><svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div class="mobile_menu" onclick="this.closest('header').classList.toggle('menu')"><svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="5" cy="21" r="5" fill="#34C397"/>
 <circle cx="21" cy="21" r="5" fill="#34C397"/>
 <circle cx="37" cy="21" r="5" fill="white"/>
@@ -42,6 +43,9 @@
 
                 </div>
             </div>
+            <section class="mobile_menu">
+                <menu><a href="projects.html">Проекты </a><a href="about.html">О нас</a><a href="news.html">Новости</a><a href="contacts.html">Контакты</a></menu>
+            </section>
         </header>
         <main>
             <section class="map">
@@ -60,59 +64,65 @@
             </section>
             <section class="form">
                 <div class="container">
-                    <h2>формы обратной связи для СМИ </h2>
-                    <form action="">
-                        <div class="person">
-                            <fieldset class="text">
-                                <input type="text" placeholder=" " required><span>Имя</span>
-                                <div class="error">введите свое имя</div>
-                            </fieldset>
-                            <fieldset class="text">
-                                <input type="text" placeholder=" " required><span>Фамилия</span>
-                                <div class="error">введите свою фамилию</div>
-                            </fieldset>
-                        </div>
-                        <div class="contacts">
-                            <fieldset class="text">
-                                <input type="text" placeholder=" "><span>Название СМИ</span>
-                            </fieldset>
-                            <fieldset class="text">
-                                <input type="text" placeholder=" "><span>Должность</span>
-                            </fieldset>
-                            <fieldset class="text">
-                                <input type="email" placeholder=" " required><span>Электронная почта</span>
-                                <div class="error">введите свою почту</div>
-                            </fieldset>
-                            <fieldset class="text">
-                                <input type="email" placeholder=" " required><span>Телефон</span>
-                                <div class="error">введите свой телефон</div>
-                            </fieldset>
-                        </div>
-                        <div class="title">
-                            <fieldset class="text">
-                                <input type="text" placeholder=" "><span>Тема обращения</span>
-                            </fieldset>
-                        </div>
-                        <div class="message">
-                            <fieldset class="text">
-                                <input type="text" placeholder=" "><span>Сообщение</span>
-                            </fieldset>
-                            <fieldset class="text">
-                                <input type="text" placeholder=" "><span>Ссылка на публикацию</span>
-                            </fieldset>
-                            <label class="upload">
-                                <div class="icon"><img class="plus" src="images/upload_plus.svg" alt=""><img class="tick" src="images/upload_tick.svg" alt=""></div>
-                                <input type="file" name="" onchange="upload(this)"><span class="name"></span><span class="default">Прикрепить файл</span>
-                            </label>
-                        </div>
-                        <div class="send">
-                            <label class="checkbox">
-                                <input type="checkbox" name="">
-                                <div class="tick"><img src="images/checkbox_tick.svg" alt=""></div><span>Нажимая на кнопку сохранить вы соглашаетесь <br>на обработку персональных данных</span>
-                            </label>
-                            <button>Отправить</button>
-                        </div>
-                    </form>
+                    <div class="default">
+                        <h2>формы обратной связи для СМИ </h2>
+                        <form action="" onsubmit="event.preventDefault(); this.reset(); this.closest('section.form').classList.add('success')">
+                            <div class="person">
+                                <fieldset class="text">
+                                    <input type="text" placeholder=" " required><span>Имя</span>
+                                    <div class="error">введите свое имя</div>
+                                </fieldset>
+                                <fieldset class="text">
+                                    <input type="text" placeholder=" " required><span>Фамилия</span>
+                                    <div class="error">введите свою фамилию</div>
+                                </fieldset>
+                            </div>
+                            <div class="contacts">
+                                <fieldset class="text">
+                                    <input type="text" placeholder=" "><span>Название СМИ</span>
+                                </fieldset>
+                                <fieldset class="text">
+                                    <input type="text" placeholder=" "><span>Должность</span>
+                                </fieldset>
+                                <fieldset class="text">
+                                    <input type="email" placeholder=" " required><span>Электронная почта</span>
+                                    <div class="error">введите свою почту</div>
+                                </fieldset>
+                                <fieldset class="text">
+                                    <input type="tel" placeholder=" " required><span>Телефон</span>
+                                    <div class="error">введите свой телефон</div>
+                                </fieldset>
+                            </div>
+                            <div class="title">
+                                <fieldset class="text">
+                                    <input type="text" placeholder=" "><span>Тема обращения</span>
+                                </fieldset>
+                            </div>
+                            <div class="message">
+                                <fieldset class="text">
+                                    <input type="text" placeholder=" "><span>Сообщение</span>
+                                </fieldset>
+                                <fieldset class="text">
+                                    <input type="text" placeholder=" "><span>Ссылка на публикацию</span>
+                                </fieldset>
+                                <label class="upload">
+                                    <div class="icon"><img class="plus" src="images/upload_plus.svg" alt=""><img class="tick" src="images/upload_tick.svg" alt=""></div>
+                                    <input type="file" name="" onchange="upload(this)"><span class="name"></span><span class="default">Прикрепить файл</span>
+                                </label>
+                            </div>
+                            <div class="send">
+                                <label class="checkbox">
+                                    <input type="checkbox" name="" required>
+                                    <div class="tick"><img src="images/checkbox_tick.svg" alt=""></div><span>Нажимая на кнопку сохранить вы соглашаетесь <br>на обработку персональных данных</span>
+                                </label>
+                                <button>Отправить</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="success">
+                        <h2>Спасибо за Ваше <br>сообщение!</h2><span>Мы получили Вашу заявку и свяжемся с Вами <br>в ближайшее время.</span>
+                        <button onclick="this.closest('section.form').classList.remove('success')">закрыть</button>
+                    </div>
                 </div>
             </section>
         </main>

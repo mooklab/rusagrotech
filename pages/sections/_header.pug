@@ -10,5 +10,12 @@ header
             a(href="news.html") Новости
             a(href="contacts.html") Контакты
 
-        div.mobile_menu
+        div(onclick="this.closest('header').classList.toggle('menu')").mobile_menu
             include ../../images/menu.svg
+
+    section.mobile_menu
+        menu
+            a(href="projects.html") Проекты 
+            a(href="about.html") О нас
+            a(href="news.html") Новости
+            a(href="contacts.html") Контакты

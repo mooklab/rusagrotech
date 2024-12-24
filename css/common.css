@@ -600,7 +600,11 @@ label.checkbox {
   }
 }
 label.checkbox input {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 17px;
+  height: 17px;
 }
 label.checkbox input:checked + div.tick img {
   display: block;
@@ -1106,7 +1110,7 @@ header div.container {
     grid-gap: 24px;
   }
 }
-header menu {
+header div.container menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1114,11 +1118,11 @@ header menu {
   height: 100%;
 }
 @media (max-width: 960px) {
-  header menu {
+  header div.container menu {
     display: none;
   }
 }
-header menu a {
+header div.container menu a {
   display: grid;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1130,7 +1134,7 @@ header menu a {
   text-transform: uppercase;
   white-space: nowrap;
 }
-header menu a::after {
+header div.container menu a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -1142,7 +1146,7 @@ header menu a::after {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-header menu a:hover::after {
+header div.container menu a:hover::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -1152,7 +1156,7 @@ header menu a:hover::after {
   height: 3px;
   background: #34C397;
 }
-header menu a.active::after {
+header div.container menu a.active::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -1162,7 +1166,7 @@ header menu a.active::after {
   height: 3px;
   background: #34C397;
 }
-header menu a:first-child {
+header div.container menu a:first-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1171,21 +1175,22 @@ header menu a:first-child {
           align-items: center;
   gap: 10px;
 }
-header menu a:first-child::before {
+header div.container menu a:first-child::before {
   content: "";
   display: block;
   width: 22px;
   height: 6px;
   background-image: url(../images/menu_dots.svg);
 }
-header div.mobile_menu {
+header div.container div.mobile_menu {
+  cursor: pointer;
   display: none;
 }
-header div.mobile_menu svg circle:last-child {
-  fill: #34C397;
+header div.container div.mobile_menu svg circle:last-child {
+  fill: #e6e6e6;
 }
 @media (max-width: 960px) {
-  header div.mobile_menu {
+  header div.container div.mobile_menu {
     display: block;
     margin-right: 14px;
   }
@@ -1199,4 +1204,44 @@ header.transparent div.mobile_menu svg circle:last-child {
 }
 header.transparent div.container {
   border: unset;
+}
+header section.mobile_menu {
+  display: none;
+}
+header.menu {
+  background: #FAFAFA;
+}
+header.menu div.container {
+  border-bottom: unset;
+}
+header.menu div.container div.mobile_menu svg circle {
+  fill: #1c252e;
+}
+header.menu div.container div.mobile_menu svg circle:last-child {
+  fill: #34c397;
+}
+header.menu section.mobile_menu {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: calc(100vh - 80px);
+}
+header.menu section.mobile_menu menu {
+  display: grid;
+  grid-gap: 55px;
+}
+header.menu section.mobile_menu menu a {
+  font-family: Stapel;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 193%;
+  text-transform: uppercase;
+  text-align: center;
+  color: #1c252e;
+  margin-top: -16px;
+  margin-bottom: -18px;
+}
+header.menu section.mobile_menu menu a:hover {
+  color: #34c397;
 }/*# sourceMappingURL=common.css.map */

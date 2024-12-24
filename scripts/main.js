@@ -105,6 +105,7 @@ const aboutYears = new Swiper('section.about div.swiper.years', {
 })
 const aboutTexts = new Swiper('section.about div.swiper.texts', {
     slidesPerView: 1,
+    autoHeight: true,
     thumbs: {
         swiper: aboutYears
     }

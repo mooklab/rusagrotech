@@ -14,75 +14,76 @@ header
         +screen(m)
             grid-gap: 24px
 
-    menu
-        display: flex
-        gap: 65px
-        height: 100%
-        +screen(m)
-            display: none
-
-        a
-            display: grid
-            align-items: center
-            position: relative
-            height: 100%
-            font-weight: 500
-            font-size: 12px
-            text-transform: uppercase
-            white-space: nowrap
-            &::after
-                content: ''
-                position: absolute
-                bottom: 0
-                left: -12px
-                display: block
-                width: 0px
-                height: 3px
-                background: #34C397
-                transition: all .3s
-
-            &:hover
-                &::after
-                    content: ''
-                    position: absolute
-                    bottom: 0
-                    left: -12px
-                    display: block
-                    width: calc(100% + 24px)
-                    height: 3px
-                    background: #34C397
-
-            &.active
-                &::after
-                    content: ''
-                    position: absolute
-                    bottom: 0
-                    left: -12px
-                    display: block
-                    width: calc(100% + 24px)
-                    height: 3px
-                    background: #34C397
-
-
-        a:first-child
+        menu
             display: flex
-            align-items: center
-            gap: 10px
-            &::before
-                content: ''
-                display: block
-                width: 22px
-                height: 6px
-                background-image: url(../images/menu_dots.svg)
+            gap: 65px
+            height: 100%
+            +screen(m)
+                display: none
 
-    div.mobile_menu
-        display: none
-        svg
-            circle:last-child
-                fill: #34C397
-        +screen(m)
-            display: block
-            margin-right: 14px
+            a
+                display: grid
+                align-items: center
+                position: relative
+                height: 100%
+                font-weight: 500
+                font-size: 12px
+                text-transform: uppercase
+                white-space: nowrap
+                &::after
+                    content: ''
+                    position: absolute
+                    bottom: 0
+                    left: -12px
+                    display: block
+                    width: 0px
+                    height: 3px
+                    background: #34C397
+                    transition: all .3s
+
+                &:hover
+                    &::after
+                        content: ''
+                        position: absolute
+                        bottom: 0
+                        left: -12px
+                        display: block
+                        width: calc(100% + 24px)
+                        height: 3px
+                        background: #34C397
+
+                &.active
+                    &::after
+                        content: ''
+                        position: absolute
+                        bottom: 0
+                        left: -12px
+                        display: block
+                        width: calc(100% + 24px)
+                        height: 3px
+                        background: #34C397
+
+
+            a:first-child
+                display: flex
+                align-items: center
+                gap: 10px
+                &::before
+                    content: ''
+                    display: block
+                    width: 22px
+                    height: 6px
+                    background-image: url(../images/menu_dots.svg)
+
+        div.mobile_menu
+            cursor: pointer
+            display: none
+            svg
+                circle:last-child
+                    fill: #e6e6e6
+            +screen(m)
+                display: block
+                margin-right: 14px
 
     &.transparent
         background: transparent
@@ -93,3 +94,46 @@ header
                     fill: white
         div.container
             border: unset
+
+    section.mobile_menu
+        display: none
+
+    &.menu
+        background: #FAFAFA
+
+        div.container
+            border-bottom: unset
+            div.mobile_menu
+                svg
+                    circle
+                        fill: #1c252e
+                        &:last-child
+                            fill: #34c397
+
+        section.mobile_menu
+            display: grid
+            align-items: center
+            height: calc(100vh - 80px)
+            menu
+                display: grid
+                grid-gap: 55px
+                a
+                    font-family: Stapel
+                    font-weight: 400
+                    font-size: 28px
+                    line-height: 193%
+                    text-transform: uppercase
+                    text-align: center
+                    color: #1c252e
+                    margin-top: -16px
+                    margin-bottom: -18px
+                    &:hover
+                        color: #34c397
+
+
+
+
+
+
+
+

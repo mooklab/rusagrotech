@@ -1,7 +1,7 @@
-coord = "[54.218747, 45.186472]"
-adress = "г. Саранск, ул. Энергетическая, 37"
-phone = "+7 (8342) 24-15-36"
-email = "komelectrotex@mail.ru"
+coord = "[55.729366, 37.626241]"
+adress = "115054, город Москва, Валовая ул., д. 35"
+phone = "+7 (495) 363 1661"
+email = "contact@rusagro.tech"
 
 ymaps.ready(function(){
     var map = new ymaps.Map('map', {
@@ -10,20 +10,22 @@ ymaps.ready(function(){
         controls: ["zoomControl"]
     })
     var placemark = new ymaps.Placemark(JSON.parse( coord ), {
-        hintContent: 'Офис',
-        balloonContent: `
-            <span>адрес:</span>
-            <strong>` + adress + `</strong>
-            <span>Телефон:</span>
-            <strong><a href="tel:` + phone + `">` + phone + `</a></strong>
-            <span>Почта:</span>
-            <strong><a href="mailto:` + email + `">` + email + `</a></strong>
-        `
+        // Всплывашка pin
+        // hintContent: 'Офис',
+        // balloonContent: `
+        //     <span>адрес:</span>
+        //     <strong>` + adress + `</strong>
+        //     <span>Телефон:</span>
+        //     <strong><a href="tel:` + phone + `">` + phone + `</a></strong>
+        //     <span>Почта:</span>
+        //     <strong><a href="mailto:` + email + `">` + email + `</a></strong>
+        // `
     }, {
-        iconLayout: 'default#image',
-        iconImageHref: '../images/icons/Pin_Filled.svg',
-        iconImageSize: [50, 50],
-        iconImageOffset: [-30, -45]
+        // Нестандартный pin
+        // iconLayout: 'default#image',
+        // iconImageHref: '../images/icons/Pin_Filled.svg',
+        // iconImageSize: [50, 50],
+        // iconImageOffset: [-30, -45]
     });
     map.geoObjects.add(placemark);
     map.behaviors.disable('scrollZoom')
